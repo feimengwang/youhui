@@ -9,4 +9,8 @@
 	<select id="loginUser"  resultType="cn.true123.youhui.bean.User">
 		select * from user where name = #{name} and password=#{password}
 	</select>
+	<insert id="insertUser" parameterType="cn.true123.youhui.bean.User">
+		insert into user(id, name, password)
+ 		 values (#{id}, #{name}, #{password})
+	</insert>
 </mapper>

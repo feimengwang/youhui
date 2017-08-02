@@ -2,11 +2,10 @@ package cn.true123.youhui.bean;
 
 import java.io.Serializable;
 
-public class Tag implements Serializable {
-	private static final long serialVersionUID = -1264581720641316209L;
+public class Catalog implements Serializable {
+	private static final long serialVersionUID = -6510019383932858762L;
 	private int id;
 	private String name;
-	private int itemId;
 
 	public int getId() {
 		return id;
@@ -24,24 +23,15 @@ public class Tag implements Serializable {
 		this.name = name;
 	}
 
-	public int getItemId() {
-		return itemId;
-	}
-
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
-	}
-
-	public Tag(int id, String name, int itemId) {
+	public Catalog(int id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.itemId = itemId;
 	}
 
 	@Override
 	public String toString() {
-		return "Tag [id=" + id + ", name=" + name + ", itemId=" + itemId + "]";
+		return "Catalog [id=" + id + ", name=" + name + "]";
 	}
 
 }

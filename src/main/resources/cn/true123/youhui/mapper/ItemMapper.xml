@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.true123.youhui.mapper.ItemMapper">
+	<select id="selectId" resultType="cn.true123.youhui.bean.Item">
+		select * from item where id = #{id}
+	</select>
+	<insert id="insertTag" parameterType="cn.true123.youhui.bean.Item">
+		insert into item(id,title,date,url,catalogid,context,imgurl,createduserid) 
+		values(#{id},#{title},#{date},#{url},#{catalogid},#{context},#{imgurl},#{createduserid});
+	</insert>
+</mapper>
