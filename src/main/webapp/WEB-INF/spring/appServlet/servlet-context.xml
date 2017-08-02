@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven  />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<!-- <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<beans:property name="prefix" value="/WEB-INF/views/" /> <beans:property 
+		name="suffix" value=".jsp" /> </beans:bean> -->
+	<!-- SpringResourceTemplateResolver automatically integrates with Spring's 
+		own -->
+	<!-- resource resolution infrastructure, which is highly recommended. -->
+	<beans:bean id="templateResolver"
+		class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
+		<beans:property name="prefix" value="/WEB-INF/templates/" />
+		<beans:property name="suffix" value=".html" />
+		<!-- HTML is the default value, added here for the sake of clarity. -->
+		<beans:property name="templateMode" value="HTML" />
+		<!-- Template cache is true by default. Set to false if you want -->
+		<!-- templates to be automatically updated when modified. -->
+		<beans:property name="cacheable" value="true" />
+		<beans:property name="characterEncoding" value="UTF-8"/>
+	</beans:bean>
+
+	<!-- SpringTemplateEngine automatically applies SpringStandardDialect and -->
+	<!-- enables Spring's own MessageSource message resolution mechanisms. -->
+	<beans:bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+		<beans:property name="templateResolver" ref="templateResolver" />
+		<!-- Enabling the SpringEL compiler with Spring 4.2.4 or newer can speed 
+			up -->
+		<!-- execution in most scenarios, but might be incompatible with specific -->
+		<!-- cases when expressions in one template are reused across different 
+			data -->
+		<!-- ypes, so this flag is "false" by default for safer backwards -->
+		<!-- compatibility. -->
+		<beans:property name="enableSpringELCompiler" value="true" />
+	</beans:bean>
+
+
+	<context:component-scan base-package="cn.true123.youhui" />
+
+ <beans:bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">    
+        <beans:property name="contentNegotiationManager" ref="cnManager"/>    
+  
+        <beans:property name="viewResolvers">    
+            <beans:list>    
+  
+                <!-- Used here for 'xml' and 'atom' views  -->    
+                <beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">    
+                    <beans:property name="order" value="1"/>    
+                </beans:bean>    
+  
+                <beans:bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">    
+                    <beans:property name="templateEngine" ref="templateEngine" />    
+                    <beans:property name="characterEncoding" value="UTF-8"/>    
+                    <beans:property name="order" value="2"/>    
+                    <!-- We need to set exclusions because Content Negotiation tries to resolve from -->    
+                    <!-- Thymeleaf even if a specific view bean (of a different class) is already    -->    
+                    <!-- found, which might cause exceptions (e.g. ThymeleafView does not have a     -->    
+                    <!-- 'marshaller' property).                                                     -->    
+                    <beans:property name="excludedViewNames" value="*.xml" />    
+                </beans:bean>    
+  
+                 <!-- Default viewClass: JSTL view (JSP with html output)-->    
+                <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">    
+                    <beans:property name="prefix" value="/views/"/>    
+                    <beans:property name="suffix" value=".jsp"/>    
+                    <beans:property name="order" value="3"/>    
+                </beans:bean>    
+            </beans:list>    
+        </beans:property>    
+    </beans:bean>    
+  
+    <!-- Simple strategy: only path extension is taken into account -->    
+    <beans:bean id="cnManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">    
+        <beans:property name="favorPathExtension" value="true"/>    
+        <beans:property name="ignoreAcceptHeader" value="true"/>    
+        <beans:property name="defaultContentType" value="text/html"/>    
+  
+        <beans:property name="mediaTypes">    
+            <beans:map>    
+                <beans:entry key="html" value="text/html" />    
+                <beans:entry key="xml" value="application/xml" />    
+                <beans:entry key="atom" value="application/atom+xml" />    
+            </beans:map>    
+        </beans:property>    
+    </beans:bean>    
+
+</beans:beans>

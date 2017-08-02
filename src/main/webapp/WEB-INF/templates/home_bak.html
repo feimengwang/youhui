@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="resource/commons.css" rel="stylesheet" th:href="@{/resources/commons.css}" />
+<link href="resource/index.css" rel="stylesheet" th:href="@{/resources/index.css}" />
+
+</head>
+<body>
+<header th:insert="header::header"/>
+
+	<div id="content" _hover-ignore="1">
+		<!--<div class="twotwo-bg"></div>-->
+		<div class="content-inner">
+			<div id="index-head" class="z-clearfix">
+				<!--首页banner左侧分类导航-->
+				<div id="category">
+					<ul class="category-ul">
+						<!--自添加左侧导航开始-->
+						<li class="category-item">
+							<h3>
+								<a href="http://www.smzdm.com/" target="_blank"
+									onclick="dataLayer.push({'event':'12110','name':'热门标签'})">热门标签</a>
+							</h3> <span> <a href="http://auto.smzdm.com/" class="item-li "
+								target="_blank"
+								onclick="dataLayer.push({'event':'12120','name':'热门标签','tag':'汽车'})">汽车</a>
+								<a href="http://lvyou.smzdm.com/" class="item-li "
+								target="_blank"
+								onclick="dataLayer.push({'event':'12120','name':'热门标签','tag':'旅游'})">旅游</a>
+						</span>
+						</li>
+						<li class="category-item">
+							<h3>
+								<a href="http://home.smzdm.com/" target="_blank"
+									onclick="dataLayer.push({'event':'12110','name':'家居生活'})">家居生活</a>
+							</h3> <span> <a
+								href="http://search.smzdm.com/?c=home&amp;s=%E5%AE%B6%E5%B1%85%E5%AE%B6%E8%A3%85"
+								class="item-li " target="_blank"
+								onclick="dataLayer.push({'event':'12120','name':'家居生活','tag':'家居家装'})">家居家装</a>
+								<a
+								href="http://search.smzdm.com/?c=home&amp;s=%E6%AF%8D%E5%A9%B4%E7%94%A8%E5%93%81&amp;order=score"
+								class="item-li " target="_blank"
+								onclick="dataLayer.push({'event':'12120','name':'家居生活','tag':'母婴用品'})">母婴用品</a>
+						</span>
+						</li>
+
+					</ul>
+				</div>
+				<!--首页banner左侧分类导航结束-->
+				<!--首页slick容器-->
+				<div class="slick-wrap">
+					<!--首页slick轮播图结构-->
+					<!--大轮播图start-->
+					<div
+						class="J_slick banner-slick slick-initialized slick-slider slick-dotted"
+						role="toolbar">
+						<button type="button" class="z-slick-btn-prev z-icons slick-arrow"
+							style="display: inline-block;">&lt;</button>
+						<div aria-live="polite" class="slick-list draggable">
+							<div class="slick-track"
+								style="opacity: 1; width: 4760px; transform: translate3d(-2040px, 0px, 0px);"
+								role="listbox">
+								<a href="http://www.smzdm.com/p/7243202/?promotion=WEBHPPBBNL05"
+									class="slick-pic slick-slide slick-cloned" target="_blank"
+									onclick="dataLayer.push({'event':'12210','position':'5','pagetitle':'糖都是甜的吗？无糖可乐真的无糖吗？'})"
+									data-slick-index="-1" aria-hidden="true" style="width: 680px;"
+									tabindex="-1"> <img th:src="@{/resources/595afa6f670c16318.png}"
+									alt="糖都是甜的吗？无糖可乐真的无糖吗？" />
+								</a> <a
+									href="http://www.smzdm.com/p/7486031/?promotion=WEBHPPBBNL01"
+									class="slick-pic slick-slide slick-cloned" target="_blank"
+									onclick="dataLayer.push({'event':'12210','position':'1','pagetitle':'天猫精选 Summer Sale盛夏年中促'})"
+									data-slick-index="5" aria-hidden="true" style="width: 680px;"
+									tabindex="-1"> <img th:src="@{/resources/595afa6f670c16318.png}" src="resource/595afa6f670c16318.png"
+									alt="天猫精选 Summer Sale盛夏年中促" />
+								</a>
+							</div>
+						</div>
+						<button type="button" class="z-slick-btn-next z-icons slick-arrow"
+							style="display: inline-block;">&gt;</button>
+						<ul class="slick-dots" style="display: block;" role="tablist">
+							<li class="" aria-hidden="true" role="presentation"
+								aria-selected="true" aria-controls="navigation00"
+								id="slick-slide00">
+								<button type="button" data-role="none" role="button"
+									tabindex="0">1</button>
+							</li>
+							<li aria-hidden="true" role="presentation" aria-selected="false"
+								aria-controls="navigation01" id="slick-slide01" class="">
+								<button type="button" data-role="none" role="button"
+									tabindex="0">2</button>
+							</li>
+						</ul>
+					</div>
+					<!--大轮播图end-->
+					<!--小轮播图end-->
+				</div>
+				<!--首页slick容器结束-->
+				<!--首页banner右侧个人信息部分-->
+				<div class="J_entry entry">
+
+					<!--值头条start-->
+					<div class="headline">
+						<span class="z-special-fonts"> <img class="zhi"
+							th:src="@{/resources/59546ae3ae3613122.png}" /> <i class="zhi"></i>
+						</span>
+						<div
+							class="J_scroll scroll-wrap slick-initialized slick-slider slick-dotted"
+							role="toolbar">
+
+							<!--此处li个数大于等于4个时体验更好-->
+							<div aria-live="polite" class="slick-list draggable">
+								<div class="slick-track" style="opacity: 1; width: 596px;"
+									role="listbox">
+
+									<div class="scroll-item slick-slide slick-current slick-active">
+										<div>
+											<a href="http://post.smzdm.com/p/566123/" target="_blank"
+												title="App Store里没有的好应用"
+												onclick="dataLayer.push({'event':'12320','pagetitle':'App Store里没有的好应用'})"
+												tabindex="0">【分享】App Store里没有的好应用</a>
+										</div>
+										<div>
+											<a href="http://new.brand.smzdm.com/topic/289/"
+												target="_blank" title="可以互动的折纸 谁是我的新玩具？"
+												onclick="dataLayer.push({'event':'12320','pagetitle':'可以互动的折纸 谁是我的新玩具？'})"
+												tabindex="0">【新奇】可以互动的折纸 谁是我的新玩具？</a>
+										</div>
+										<div>
+											<a href="http://www.smzdm.com/p/7484867/" target="_blank"
+												title="天猫 城市超级专享日 生鲜水果"
+												onclick="dataLayer.push({'event':'12320','pagetitle':'天猫 城市超级专享日 生鲜水果'})"
+												tabindex="0">【专享】天猫 城市超级专享日 生鲜水果</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!--值头条end-->
+					<!--右侧功能区start-->
+					<!--右侧功能区end-->
+				</div>
+				<!--首页banner右侧个人信息部分结束-->
+			</div>
+			<!-- 首页banner end -->
+			<div class="z-stuff-bar activity-stuff-bar">
+				<a
+					href="http://s2.zdmimg.com/www/delivery/ck.php?oaparams=2__bannerid=11572__zoneid=176__cb=abcad4026e__oadest=https%3A%2F%2Fwww.smzdm.com%2Fbusiness%2F201773730"
+					target="_blank"> <img src="resource/595a04f8f252f6990.jpg" /></a>
+			</div>
+			<!-- sale.ejs 对应值得买精选版块 信息流-->
+			<!-- 好价精选feed流 -->
+			<div id="feed-wrap" class="z-clearfix J_feed_wrap">
+				<!-- 列表页主要内容 -->
+				<div id="feed-main">
+					<!-- 好价排行榜 BEGIN-->
+					<!-- 好价排行榜 END -->
+
+					<div class="z-column-head  z-clearfix">
+						<div class="z-column-title">
+							<span class="subtitle"
+								onclick="dataLayer.push({'event':'14000','tab':'值得买精选'})">值得买精选</span>
+						</div>
+					</div>
+					<div class="feed-main-con">
+						<input id="is_auto_load" value="1" type="hidden" />
+						<ul id="feed-main-list" class="feed-list-hits">
+
+							<li class="feed-row-wide  " timesort="149914040196"
+								articleid="3_7489805">
+								<h5 class="feed-block-title">
+									<a href="http://www.smzdm.com/p/7489805/" target="_blank"
+										onclick="dataLayer.push({'event':'14100','name':'好价','pagetitle':'UNIQLO 优衣库 162849 男士AIRism圆领T恤'})">UNIQLO
+										优衣库 162849 男士AIRism圆领T恤<span class="z-highlight">39元</span>
+									</a>
+								</h5>
+								<div class="feed-block z-hor-feed ">
+									<div class="z-feed-img">
+										<a class="z-tag-guonei">好价</a> <a
+											href="http://www.smzdm.com/p/7489805/" target="_blank"
+											onclick="dataLayer.push({'event':'14100','name':'好价','pagetitle':'头图'})">
+											<img src="resource/595affcc8dc0c2835.jpg"
+											alt="UNIQLO 优衣库 162849 男士AIRism圆领T恤" />
+										</a>
+									</div>
+									<div class="z-feed-content">
+										<div class="feed-block-info">
+											<span>推荐人：SkylineGT-R</span> <span class="feed-block-tags">
+												标签： <a target="_blank"
+												href="http://www.smzdm.com/tag/%E5%9B%BD%E5%86%85%E5%87%91%E5%8D%95%E5%93%81/youhui/"
+												onclick="dataLayer.push({'event':'14110','tag':'国内凑单品'})">国内凑单品</a>
+											</span>
+										</div>
+										<div class="feed-block-descripe">
+											<strong>清爽舒适，夏季必备，近期好价~</strong>UNIQLO 优衣库 162849
+											男士AIRism圆领T恤采用聚酯纤维88％和氨纶12％的混合材质，面料上身舒适清爽，能快速吸汗... <a
+												href="http://www.smzdm.com/p/7489805/" target="_blank"
+												onclick="dataLayer.push({'event':'14100','name':'好价','pagetitle':'阅读全文'})">阅读全文</a>
+										</div>
+										<div class="z-feed-foot">
+
+											<div class="z-feed-foot-r">
+												<div class="feed-link-btn">
+													<div class="feed-link-btn-inner">
+														<a isconvert="1" class="z-btn z-btn-red"
+															href="https://detail.tmall.com/item.htm?id=549088531535&amp;skuId=3335046128653"
+															data-url="https://go.smzdm.com/3830c1c7eff9cef8/ca_aa_ad_57_7489805_895_1259_59"
+															target="_blank" rel="nofollow"
+															onclick="dataLayer.push({'event':'14140','name':'好价','pagetitle':'UNIQLO 优衣库 162849 男士AIRism圆领T恤'});gtmAddToCart({'name':'UNIQLO 优衣库 162849 男士AIRism圆领T恤','id':'7489805' , 'price':'39','brand':'UNIQLO/优衣库' ,'mall':'天猫精选', 'category':'服饰鞋包/男装/男上装/男士T恤','metric1':'39','dimension10':'tmall.com','dimension9':'youhui','dimension11':'2阶价格','dimension12':'天猫精选','dimension20':'无','dimension32':'先发后审','dimension25':'895'})">去购买<i
+															class="z-icons">&gt;</i></a>
+													</div>
+												</div>
+												<span class="feed-block-extras">11:53 <a
+													href="http://www.smzdm.com/mall/tmall/" target="_blank"
+													onclick="dataLayer.push({'event':'14120','mall':'天猫精选'})">天猫精选</a>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+						<input name="feed_more_url" id="feed_more_url"
+							value="http://www.smzdm.com/homepage/json_more" type="hidden" />
+						<div class="feed-loading-bar" id="J_feed_loading"
+							style="display: none;">
+							<img src="resource/loading.gif" alt="loading" />
+						</div>
+						<div class="feed-pagenation">
+							<ul class="pagenation-list" id="J_feed_pagenation" style="">
+								<li class="page-turn prev-page"><i
+									class="z-icon-arrow-left"></i>上一页</li>
+								<li class="page-number current">1</li>
+
+								<li class="page-turn next-page">下一页<i
+									class="z-icon-arrow-right"></i></li>
+							</ul>
+						</div>
+						<!-- 无结果样式 -->
+						<div class="feed-no-result z-clearfix" style="display: none">
+							<div class="no-result-pic"></div>
+							<div class="no-result-text">
+								<p class="tip-title">很抱歉，没有符合条件的结果</p>
+								<p class="tip-small">请修改筛选条件试试</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 列表页主要内容 end -->
+				<!-- 前端html模板代码 -->
+				<!-- 前端html模板代码 end-->
+				<!-- 列表页主要内容 end -->
+				<!-- 边栏内容 -->
+				<div id="feed-side">
+
+
+					<!-- 精选挂件 start -->
+					<div class="side-jingxuan">
+						<!-- column流标题 -->
+						<div class="z-column-head  z-clearfix">
+							<div class="z-column-title">
+								<!--<a href="http://www.smzdm.com/top/" onclick="dataLayer.push({'event':'15100','name':'最值精选','operation':'查看更多'})" target="_blank">-->
+								<span class="subtitle">最值精选</span>
+
+							</div>
+							<div class="z-column-more"></div>
+						</div>
+						<div class="side-jingxuan-ul J_jingxuan_hover_ul">
+							<ul class="side-jingxuan-list active ">
+								<li><a class="side-jingxuan-link" target="_blank"
+									href="http://www.smzdm.com/p/7489238/"
+									onclick="dataLayer.push({'event':'15200','name':'最值精选','pagetitle':'免费得：Python 实战计划：7天上线苹果官网','operation':'图文点击'})">
+										<img src="resource/595afe2911ba75723_002.jpg"
+										alt="免费得：Python 实战计划：7天上线苹果官网" />
+								</a>
+									<div class="side-jingxuan-info">
+										<span>免费得：Python 实战计划：7天上线苹果官网</span> <span
+											class="side-jingxuan-title">免费</span>
+									</div></li>
+
+
+
+							</ul>
+
+						</div>
+						<a href="http://www.smzdm.com/top/"
+							onclick="dataLayer.push({'event':'15100','name':'最值精选','operation':'查看更多'})"
+							target="_blank" class="feed-main-more">查看更多</a>
+					</div>
+					<!-- 精选挂件 end -->
+				</div>
+				<!-- 边栏内容 end -->
+			</div>
+		</div>
+	</div>
+<footer id="footer" th:insert="footer::footer"/>
+</body>
+</html>

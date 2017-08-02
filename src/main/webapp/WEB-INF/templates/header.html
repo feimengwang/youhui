@@ -1,0 +1,91 @@
+<html>
+<body>
+<header id="header" >
+	<!-- 搜索栏 -->
+	<div id="global-search" th:fragment="search">
+		<div class="search-inner z-clearfix">
+			<h1 id="logo">
+				<a href="http://www.smzdm.com/">
+
+					<img src="//res.smzdm.com/pc/v1.0/dist/img/embed/logo.png"
+					width="207" height="66" />
+				</a>
+			</h1>
+			<!-- 搜索框  -->
+			<input name="default_keywords" value="空调" type="hidden" />
+			<form action="http://search.smzdm.com/" method="get" id="search-form">
+				<div class="search-wrap">
+					<div class="search-input-wrap">
+						<input name="c" value="home" readonly="readonly" type="hidden" />
+						<input class="search-input" id="J_search_input" name="s"
+							placeholder="清凉一夏" autocomplete="off" type="search" />
+					</div>
+					<button type="submit" class="search-submit z-icons z-icon-search"></button>
+				</div>
+				<div class="hot-words">
+					热门搜索: <a target="_blank" class=""
+						href="http://search.smzdm.com/?c=home&amp;s=%E5%8D%97%E8%88%AA&amp;source=home"> 南航
+					</a>
+				</div>
+			</form>
+			<!-- 搜索框 end -->
+		</div>
+	</div>
+	<!-- 搜索栏 end-->
+	<!-- 全站导航栏 -->
+
+	<div id="global-nav" class="J_global_nav" th:fragment="nav">
+		<div class="nav-inner z-clearfix">
+			<nav>
+				<ul class="nav-list">
+					<li class="current"><a href="http://www.smzdm.com/">首页</a></li>
+
+				</ul>
+			</nav>
+			<div class="nav-controls">
+				<!-- 未登录的结构 -->
+				<span class="nav-logins" style="display: none;"> <a
+					href="javascript:void(0);"
+					onclick="dataLayer.push({'event':'91100','1sttab':'登录'});"
+					class="J_login_trigger" data-style="login">登录</a><span
+					class="z-split"></span><a href="javascript:void(0);"
+					onclick="dataLayer.push({'event':'91100','1sttab':'注册'});"
+					class="J_register_trigger" data-style="register" _hover-ignore="1">注册</a>
+				</span>
+				<ul class="control-list">
+					<li class="app-entry"><a href="http://www.smzdm.com/push/"
+						onclick="dataLayer.push({'event':'91100','1sttab':'App下载'});">App下载</a>
+					</li>
+					<li class="submit-entry"><a href="javascript:void(0);"
+						onclick="dataLayer.push({'event':'91100','1sttab':'爆料投稿'});">爆料投稿<span
+							class="arrow-down"></span></a>
+						<ul class="sub-nav">
+							<li><a href="http://post.smzdm.com/tougao/" target="_blank"
+								onclick="dataLayer.push({'event':'91200','1sttab':'爆料投稿','2ndtab':'原创投稿'});">原创投稿</a></li>
+						</ul></li>
+					<li class="user-entry J_user_entry" style="display: list-item;">
+						<a href="#"><span class="nav-username J_nav_username">fm0530</span><span
+							class="arrow-down"></span></a>
+						<ul class="sub-nav">
+							<li><a href="http://zhiyou.smzdm.com/user/" target="_blank"
+								onclick="dataLayer.push({'event':'91100','1sttab':'个人中心'})">个人中心</a></li>
+							<li><a href="http://www.beiwo.com/user/ucenter/"
+								target="_blank"
+								onclick="dataLayer.push({'event':'91100','1sttab':'我的订单'})">我的订单</a></li>
+							<li><a href="http://zhiyou.smzdm.com/guanzhu/main/"
+								target="_blank"
+								onclick="dataLayer.push({'event':'91100','1sttab':'我的关注'})">我的关注</a></li>
+
+							<li><a href="http://zhiyou.smzdm.com/user/logout/"
+								onclick="dataLayer.push({'event':'91100','1sttab':'退出登录'})">退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!-- 全站导航栏 end -->
+</header>
+</body>
+</html>

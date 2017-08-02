@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="resource/commons.css" rel="stylesheet"
+	th:href="@{/resources/commons.css}" />
+<link href="resource/index.css" rel="stylesheet"
+	th:href="@{/resources/index.css}" />
+
+</head>
+<body>
+	<header id="header">
+		<div id="global-search" th:insert="header::search" />
+		<div id="global-nav" class="J_global_nav" th:insert="header::nav" />
+	</header>
+	<div id="content">
+		<div class="content-inner">
+			<div id="index-head" class="z-clearfix">
+				<div id="category">
+					<ul class="category-ul">
+						<li class="category-item">
+							<h3>
+								<a href="http://www.smzdm.com/" target="_blank">热门标签</a>
+							</h3> 
+							<span>
+								<a class="item-li" th:each="tag : ${tags}" th:href="${tag.href}" th:text="${tag.name}" target="_blank"></a>
+							</span>
+						</li>
+						<li class="category-item">
+							<h3>
+								<a href="http://home.smzdm.com/" target="_blank">家居生活</a>
+							</h3> <span> <a
+								href="http://search.smzdm.com/"
+								class="item-li " target="_blank">家居家装</a>
+						</span>
+						</li>
+
+					</ul>
+				</div>
+				<div class="slick-wrap">
+					<div
+						class="J_slick banner-slick slick-initialized slick-slider slick-dotted">
+						<div aria-live="polite" class="slick-list draggable">
+							<div class="slick-track"
+								style="opacity: 1; width: 4760px; transform: translate3d(-2040px, 0px, 0px);"
+								role="listbox">
+								<a href="http://www.smzdm.com/p/7243202/?promotion=WEBHPPBBNL05"
+									class="slick-pic slick-slide slick-cloned" target="_blank"
+									style="width: 680px;"
+									tabindex="-1"> <img
+									th:src="@{/resources/595afa6f670c16318.png}"
+									alt="糖都是甜的吗？无糖可乐真的无糖吗？" />
+								</a> <a
+									href="http://www.smzdm.com/p/7486031/?promotion=WEBHPPBBNL01"
+									class="slick-pic slick-slide slick-cloned" target="_blank"
+									 style="width: 680px;"
+									tabindex="-1"> <img
+									th:src="@{/resources/595afa6f670c16318.png}"
+									alt="天猫精选 Summer Sale盛夏年中促" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="J_entry entry">
+					<div class="headline">
+						<span class="z-special-fonts"> <img class="zhi"
+							th:src="@{/resources/59546ae3ae3613122.png}" /> <i class="zhi"></i>
+						</span>
+						<div
+							class="J_scroll scroll-wrap slick-initialized slick-slider slick-dotted"
+							role="toolbar">
+							<div aria-live="polite" class="slick-list draggable">
+								<div class="slick-track" style="opacity: 1; width: 596px;"
+									role="listbox">
+
+									<div class="scroll-item slick-slide slick-current slick-active">
+										<div>
+											<a href="http://post.smzdm.com/p/566123/" target="_blank"
+												title="App Store里没有的好应用" tabindex="0">【分享】App
+												Store里没有的好应用</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="z-stuff-bar activity-stuff-bar">
+				<a
+					href=""
+					target="_blank"> <img src="resource/595a04f8f252f6990.jpg" /></a>
+			</div>
+			<div id="feed-wrap" class="z-clearfix J_feed_wrap">
+				<div id="feed-main">
+
+					<div class="z-column-head  z-clearfix">
+						<div class="z-column-title">
+							<span class="subtitle">值得买精选</span>
+						</div>
+					</div>
+					<div class="feed-main-con">
+						<input id="is_auto_load" value="1" type="hidden" />
+						<ul id="feed-main-list" class="feed-list-hits">
+
+							<li class="feed-row-wide">
+								<h5 class="feed-block-title">
+									<a href="http://www.smzdm.com/p/7489805/" target="_blank">UNIQLO
+										优衣库 162849 男士AIRism圆领T恤<span class="z-highlight">39元</span>
+									</a>
+								</h5>
+								<div class="feed-block z-hor-feed ">
+									<div class="z-feed-img">
+										<a class="z-tag-guonei">好价</a> <a
+											href="http://www.smzdm.com/p/7489805/" target="_blank"> <img
+											src="resource/595affcc8dc0c2835.jpg"
+											alt="UNIQLO 优衣库 162849 男士AIRism圆领T恤" />
+										</a>
+									</div>
+									<div class="z-feed-content">
+										<div class="feed-block-info">
+											<span>推荐人：SkylineGT-R</span> <span class="feed-block-tags">
+												标签： <a target="_blank"
+												href="">国内凑单品</a>
+											</span>
+										</div>
+										<div class="feed-block-descripe">
+											<strong>清爽舒适，夏季必备，近期好价~</strong>UNIQLO 优衣库 162849
+											男士AIRism圆领T恤采用聚酯纤维88％和氨纶12％的混合材质，面料上身舒适清爽，能快速吸汗... <a
+												href="http://www.smzdm.com/p/7489805/" target="_blank">阅读全文</a>
+										</div>
+										<div class="z-feed-foot">
+
+											<div class="z-feed-foot-r">
+												<div class="feed-link-btn">
+													<div class="feed-link-btn-inner">
+														<a class="z-btn z-btn-red"
+															href=""
+															target="_blank">去购买<i class="z-icons">&gt;</i></a>
+													</div>
+												</div>
+												<span class="feed-block-extras">11:53 <a
+													href="http://www.smzdm.com/mall/tmall/" target="_blank">天猫精选</a>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+						<div class="feed-loading-bar" id="J_feed_loading"
+							style="display: none;">
+							<img src="resource/loading.gif" alt="loading" />
+						</div>
+						<div class="feed-pagenation">
+							<ul class="pagenation-list" id="J_feed_pagenation" style="">
+								<li class="page-turn prev-page"><i
+									class="z-icon-arrow-left"></i>上一页</li>
+								<li class="page-number current">1</li>
+
+								<li class="page-turn next-page">下一页<i
+									class="z-icon-arrow-right"></i></li>
+							</ul>
+						</div>
+						<div class="feed-no-result z-clearfix" style="display: none">
+							<div class="no-result-pic"></div>
+							<div class="no-result-text">
+								<p class="tip-title">很抱歉，没有符合条件的结果</p>
+								<p class="tip-small">请修改筛选条件试试</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="feed-side">
+
+
+					<div class="side-jingxuan">
+						<div class="z-column-head  z-clearfix">
+							<div class="z-column-title">
+								<span class="subtitle">最值精选</span>
+
+							</div>
+							<div class="z-column-more"></div>
+						</div>
+						<div class="side-jingxuan-ul J_jingxuan_hover_ul">
+							<ul class="side-jingxuan-list active ">
+								<li><a class="side-jingxuan-link" target="_blank"
+									href="http://www.smzdm.com/p/7489238/"> <img
+										src="resource/595afe2911ba75723_002.jpg"
+										alt="免费得：Python 实战计划：7天上线苹果官网" />
+								</a>
+									<div class="side-jingxuan-info">
+										<span>免费得：Python 实战计划：7天上线苹果官网</span> <span
+											class="side-jingxuan-title">免费</span>
+									</div></li>
+							</ul>
+
+						</div>
+						<a href="http://www.smzdm.com/top/" target="_blank"
+							class="feed-main-more">查看更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer" th:insert="footer::footer" />
+</body>
+</html>
