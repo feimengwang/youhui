@@ -3,11 +3,41 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.true123.youhui.mapper.ItemMapper">
-	<select id="selectId" resultType="cn.true123.youhui.bean.Item">
-		select * from item where id = #{id}
+
+	<resultMap type="item" id="myitem">
+		<id column="id" property="id" />
+		<result column="title" property="title" />
+		<result column="date" property="date" />
+		<result column="url" property="url" />
+		<result column="context" property="context" />
+		<result column="imgUrl" property="imgUrl" />
+		<association property="catalog" javaType="catalog" >
+			<id column="id" property="id"/>
+			<result column="name" property="name"/>
+		</association>
+		<association property="user" javaType="user" >
+			<id column="id" property="id"/>
+			<result column="name" property="name"/>
+		</association>
+		<collection property="tags" ofType="tag" column="itemid">
+			<id column="id" property="id" />
+			<result column="name" property="name" />
+		</collection>
+		
+
+	</resultMap>
+	<select id="selectItem" resultMap="myitem">
+		select itm.*,tg.*,cl.*,u.* from item as itm, tag as tg, catalog as cl, user as u 
+		where itm.id=tg.itemid 
+			and tg.id=itm.catalogid and itm.createduserid=u.id 
+			and itm.id =#{id}
 	</select>
-	<insert id="insertTag" parameterType="cn.true123.youhui.bean.Item">
-		insert into item(id,title,date,url,catalogid,context,imgurl,createduserid) 
+	<select id="selectItems" resultMap="myitem">
+		select * from item where createdUserId =#{createdUserId}
+	</select>
+	<insert id="insertTag" parameterType="item">
+		insert into
+		item(id,title,date,url,catalogid,context,imgurl,createduserid)
 		values(#{id},#{title},#{date},#{url},#{catalogid},#{context},#{imgurl},#{createduserid});
 	</insert>
 </mapper>

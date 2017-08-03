@@ -34,4 +34,9 @@ public class Catalog implements Serializable {
 		return "Catalog [id=" + id + ", name=" + name + "]";
 	}
 
+	public Catalog() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 }

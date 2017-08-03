@@ -6,7 +6,7 @@ public class Tag implements Serializable {
 	private static final long serialVersionUID = -1264581720641316209L;
 	private int id;
 	private String name;
-	private int itemId;
+	private Item item;
 
 	public int getId() {
 		return id;
@@ -24,24 +24,29 @@ public class Tag implements Serializable {
 		this.name = name;
 	}
 
-	public int getItemId() {
-		return itemId;
+	public Item getItem() {
+		return item;
 	}
 
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
+	public void setItem(Item item) {
+		this.item = item;
 	}
 
-	public Tag(int id, String name, int itemId) {
+	public Tag(int id, String name, Item item) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.itemId = itemId;
+		this.item = item;
 	}
 
 	@Override
 	public String toString() {
-		return "Tag [id=" + id + ", name=" + name + ", itemId=" + itemId + "]";
+		return "Tag [id=" + id + ", name=" + name + ", item=" + item + "]";
 	}
+
+	public Tag() {
+		super();
+	}
+
 
 }

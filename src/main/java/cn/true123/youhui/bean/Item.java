@@ -9,38 +9,18 @@ public class Item implements Serializable {
 	private String title;
 	private String date;
 	private String url;
-	private String catalogName;
-	private int catalogId;
+	private Catalog catalog;
 	private List<Tag> tags;
 	private String context;
 	private String imgUrl;
-	private int createdUserId;
-	private int createdUserName;
+	private User user;
 
-	
-
-	public String getCatalogName() {
-		return catalogName;
+	public User getUser() {
+		return user;
 	}
 
-	public void setCatalogName(String catalogName) {
-		this.catalogName = catalogName;
-	}
-
-	public int getCreatedUserName() {
-		return createdUserName;
-	}
-
-	public void setCreatedUserName(int createdUserName) {
-		this.createdUserName = createdUserName;
-	}
-
-	public int getCreatedUserId() {
-		return createdUserId;
-	}
-
-	public void setCreatedUserId(int createdUserId) {
-		this.createdUserId = createdUserId;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public int getId() {
@@ -99,28 +79,36 @@ public class Item implements Serializable {
 		this.imgUrl = imgUrl;
 	}
 
-	public Item(int id, String title, String date, String url, String catalogName, List<Tag> tags, String context,
-			String imgUrl, int createdUserId, int createdUserName) {
+	public Catalog getCatalog() {
+		return catalog;
+	}
+
+	public void setCatalog(Catalog catalog) {
+		this.catalog = catalog;
+	}
+
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", title=" + title + ", date=" + date + ", url=" + url + ", catalog=" + catalog
+				+ ", tags=" + tags + ", context=" + context + ", imgUrl=" + imgUrl + ", user=" + user + "]";
+	}
+
+	public Item(int id, String title, String date, String url, Catalog catalog, List<Tag> tags, String context,
+			String imgUrl, User user) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.date = date;
 		this.url = url;
-		this.catalogName = catalogName;
+		this.catalog = catalog;
 		this.tags = tags;
 		this.context = context;
 		this.imgUrl = imgUrl;
-		this.createdUserId = createdUserId;
-		this.createdUserName = createdUserName;
+		this.user = user;
 	}
 
-	@Override
-	public String toString() {
-		return "Item [id=" + id + ", title=" + title + ", date=" + date + ", url=" + url + ", catalogName="
-				+ catalogName + ", tags=" + tags + ", context=" + context + ", imgUrl=" + imgUrl + ", createdUserId="
-				+ createdUserId + ", createdUserName=" + createdUserName + "]";
+	public Item() {
+		super();
 	}
-
-	
 
 }

@@ -2,11 +2,17 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.true123.youhui.mapper.UserMapper">
-	<select id="selectId" resultType="cn.true123.youhui.bean.Tag">
+<mapper namespace="cn.true123.youhui.mapper.TagMapper">
+	<resultMap type="tag" id="mytag">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<association property="item" javaType="item" column="itemid">
+		</association>
+	</resultMap>
+	<select id="selectId" resultType="tag">
 		select * from tag where id = #{id}
 	</select>
-	<insert id="insertTag" parameterType="cn.true123.youhui.bean.Tag">
+	<insert id="insertTag" parameterType="tag">
 		insert into tag(id, name, password)
  		 values (#{id}, #{name}, #{password})
 	</insert>

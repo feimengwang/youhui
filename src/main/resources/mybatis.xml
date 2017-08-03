@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias alias="catalog" type="cn.true123.youhui.bean.Catalog" />
+		<typeAlias alias="item" type="cn.true123.youhui.bean.Item" />
+		<typeAlias alias="tag" type="cn.true123.youhui.bean.Tag" />
+		<typeAlias alias="user" type="cn.true123.youhui.bean.User" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="cn/true123/youhui/mapper/UserMapper.xml" />
+		<mapper resource="cn/true123/youhui/mapper/ItemMapper.xml" />
+		<mapper resource="cn/true123/youhui/mapper/TagMapper.xml" />
+		<mapper resource="cn/true123/youhui/mapper/CatalogMapper.xml" />
+	</mappers>
+</configuration>

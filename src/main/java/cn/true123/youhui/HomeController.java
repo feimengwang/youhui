@@ -12,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import cn.true123.youhui.bean.Item;
+import cn.true123.youhui.service.IItemService;
 import cn.true123.youhui.service.IUserService;
 
 /**
@@ -24,6 +26,9 @@ public class HomeController {
 	
 	@Autowired
 	private IUserService userService;
+	
+	@Autowired
+	private IItemService itemService;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -34,7 +39,11 @@ public class HomeController {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
-		
+		Item item = itemService.getItem(1);
+		System.out.println(item.getCatalog());
+		System.out.println(item.getUser());
+		System.out.println(item.getTags());
+		System.out.println(item);
 		
 		return "home";
 	}
